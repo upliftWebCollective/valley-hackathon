@@ -1,5 +1,5 @@
 angular.module('rails-angular')
-  .controller('infoController', infoController)
+  .controller('infoController', ["$state", "$stateParams", "$http", "$scope", infoController ])
   function infoController($state,$stateParams,$http, $scope) {
     var self = this
 

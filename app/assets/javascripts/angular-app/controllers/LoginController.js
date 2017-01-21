@@ -1,5 +1,5 @@
 angular.module('rails-angular')
-  .controller('LoginController', LoginController)
+  .controller('LoginController', ["$scope", "$auth", LoginController ])
 
 function LoginController($scope, $auth) {
   console.log("AM I HERE")

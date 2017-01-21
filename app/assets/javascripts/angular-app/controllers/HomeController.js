@@ -1,5 +1,5 @@
 angular.module('rails-angular')
-  .controller('HomeController', HomeController)
+  .controller('HomeController', ["NgMap", "$http", "$stateParams", "$state", HomeController ])
   function HomeController(NgMap, $http, $stateParams, $state) {
     this.points = 0
     
