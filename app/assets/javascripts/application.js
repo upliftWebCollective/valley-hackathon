@@ -15,5 +15,7 @@
 //= require angular/angular
 //= require ng-token-auth/dist/ng-token-auth
 //= require angular-cookie/angular-cookie
+//= require angular-ui-router/release/angular-ui-router
 //= require_tree ../../../vendor/assets/bower_components/ng-token-auth/dist/.
+//= require angular-rails-templates
 //= require_tree .
