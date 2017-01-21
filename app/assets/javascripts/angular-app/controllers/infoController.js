@@ -3,13 +3,13 @@ angular.module('rails-angular')
   function infoController($state,$stateParams,$http, $scope) {
     var self = this
 
-    $http.get('http://localhost:3000/point_of_interest/' + $stateParams.id)
+    $http.get('/point_of_interest/' + $stateParams.id)
       .then(function(res) {
         self.place = res.data
       })
     
     this.submitKey = function() {
-      $http.post('http://localhost:3000/point_of_interest/validate_code', {"business_code": self.key, "id": $stateParams.id})
+      $http.post('/point_of_interest/validate_code', {"business_code": self.key, "id": $stateParams.id})
         .then(function(res) {
           if(res.data.match) {
             $scope.$parent.ctrl.points++

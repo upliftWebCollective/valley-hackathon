@@ -4,7 +4,7 @@ angular.module('rails-angular')
     this.points = 0
     
     NgMap.getMap().then(function(map) {
-      $http.get('http://localhost:3000/point_of_interest')
+      $http.get('/point_of_interest')
         .then(function(res) {
           var pois = res.data
           console.log('pois: ', pois)
