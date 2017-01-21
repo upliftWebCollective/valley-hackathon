@@ -137,4 +137,3 @@ pois = PointOfInterest.create([{
 pois.each do |p|
   p.update(business_code: "valley-hackathon")
 end
-end
