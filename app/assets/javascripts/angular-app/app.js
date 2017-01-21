@@ -10,6 +10,23 @@ var app = angular.module('rails-angular',['ng-token-auth', 'ui.router', 'templat
         templateUrl: 'home.html',
         controller: 'HomeController as ctrl'
       })
+      .state('secrit',{
+        url: '/secrit',
+        templateUrl: 'secrit.html',
+        controller: 'SecritController as ctrl',
+        resolve: {
+          auth: function($auth, $state) {
+            $auth.validateUser()
+              .then(function(x) {
+                console.log(x)
+              })
+              .catch(function(error) {
+                console.log("YOU ARE UNWORTHY? IDK")
+                $state.go('home')
+              })
+          }
+        }
+      })
 
     $urlRouterProvider.otherwise('/')
   })
