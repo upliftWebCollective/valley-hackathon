@@ -1,22 +1,37 @@
 .nav-button {
-  background: blue;
-  border: none;
+  background: none;
+  border: solid 1px white;
+  color: white;
   decoration: none;
-  display: inline;
   font-family: "Roboto", sans-serif;
+  font-size: 1.5em;
+  margin-top: 5vmin;
+  width: 80%;
   outline: none;
+}
+.nav-button:hover {
+  color: white;
+  background: black;
+}
+
+form {
+  padding: 1em;
 }
 
 .vh-modal {
+  background: #333333;
   position: fixed;
+  color: white;
   top: 0;
   height: 100vh;
-  background: red;
+  text-align: center;
   width: 100vw;
   z-index: 999999;
 }
 
 .form-group {
+  font-size: 1.8em;
   margin: 0 auto;
+  padding-top: 5vmin;
   width: 80%;
 }
