@@ -10,10 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170120215537) do
+ActiveRecord::Schema.define(version: 20170121060316) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  create_table "businesses", force: :cascade do |t|
+    t.string   "name"
+    t.string   "business_key"
+    t.string   "location"
+    t.text     "description"
+    t.string   "business_type"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "pictures", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "point_of_interest_id"
+    t.string   "photo_url"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  create_table "point_of_interests", force: :cascade do |t|
+    t.string   "name"
+    t.string   "location"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "provider",               default: "email", null: false
@@ -35,12 +58,11 @@ ActiveRecord::Schema.define(version: 20170120215537) do
     t.string   "nickname"
     t.string   "image"
     t.string   "email"
-    t.json     "tokens"
     t.datetime "created_at",                               null: false
     t.datetime "updated_at",                               null: false
-    t.index ["email"], name: "index_users_on_email", using: :btree
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
-    t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true, using: :btree
+    t.index ["email"], name: "index_users_on_email"
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
   end
 
 end
