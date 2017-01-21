@@ -1,3 +1,4 @@
+require 'pry'
 class BusinessController < ApplicationController
   before_action :authenticate_user!, only: [:create, :update]
 
@@ -12,6 +13,7 @@ class BusinessController < ApplicationController
   end
 
   def create
+    binding.pry
     business = Business.new(business_params)
     if business.save
       render json: {business: business, message: "Business #{business.name} has been created"}.to_json

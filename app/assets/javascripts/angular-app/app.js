@@ -22,7 +22,6 @@ var app = angular.module('rails-angular',['ng-token-auth', 'ui.router', 'templat
               })
               .catch(function(error) {
                 console.log("YOU ARE UNWORTHY? IDK")
-                $state.go('home')
               })
           }
         }
