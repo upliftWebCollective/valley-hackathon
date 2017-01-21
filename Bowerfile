@@ -1,0 +1,5 @@
+asset 'angular'
+asset 'bootstrap-sass-official'
+asset 'ng-token-auth'
+asset 'angular-cookie'
+# vim: ft=ruby
