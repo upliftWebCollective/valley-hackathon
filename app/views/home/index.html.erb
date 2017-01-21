@@ -1,2 +1,13 @@
 <div class="container-fluid" ng-app="rails-angular" ui-view></div>
-
+<script>
+var mapStyle =
+function boomMap() {
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {
+    center: new google.maps.LatLng(37.63909719999999, -120.99687819999997),
+    zoom: 14,
+    styles: mapStyle
+  }
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+}
+</script>

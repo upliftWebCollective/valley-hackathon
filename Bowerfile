@@ -3,4 +3,5 @@ asset 'bootstrap-sass-official'
 asset 'ng-token-auth'
 asset 'angular-cookie'
 asset 'angular-ui-router'
+asset 'ngmap'
 # vim: ft=ruby
