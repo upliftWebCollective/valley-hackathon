@@ -1,11 +1,9 @@
 angular.module('rails-angular')
   .controller('HomeController', HomeController)
   function HomeController(NgMap, $http, $stateParams, $state) {
+    this.points = 0
+    
     NgMap.getMap().then(function(map) {
-      console.log(map.getCenter());
-      console.log('markers', map.markers);
-      console.log('shapes', map.shapes);
-
       $http.get('http://localhost:3000/point_of_interest')
         .then(function(res) {
           var pois = res.data

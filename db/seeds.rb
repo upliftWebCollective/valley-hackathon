@@ -133,3 +133,8 @@ pois = PointOfInterest.create([{
                       "location": "4342 Dale Rd"
 
 }])
+
+pois.each do |p|
+  p.update(business_code: "valley-hackathon")
+end
+end
