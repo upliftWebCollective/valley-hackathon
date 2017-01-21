@@ -1,0 +1,54 @@
+html, body, .no-whitespace {
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.home-bg {
+  background: url('/Modesto_Arch.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.home-modal {
+  background-color: white;
+  box-shadow: 0 8px 6px -6px black;
+  height: 70vh;
+  width: 33%;
+}
+
+.center-div {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+.modal-bottom {
+  background: white;
+  height: 50%;
+  width: 100%;
+}
+
+.modal-top {
+  background: #333333;
+  height: 50%;
+  padding: 0;
+  width: 100%;
+}
+
+.btn-starter {
+  background: black;
+  border-radius: 5px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  outline: none;
+}

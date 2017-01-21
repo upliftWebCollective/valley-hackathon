@@ -12,7 +12,7 @@ var app = angular.module('rails-angular',['ng-token-auth', 'ui.router', 'templat
       })
       .state('secrit',{
         url: '/secrit',
-        templateUrl: 'secrit.html',
+        templateUrl: '/auth/secrit.html',
         controller: 'SecritController as ctrl',
         resolve: {
           auth: function($auth, $state) {

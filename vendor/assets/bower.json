@@ -5,9 +5,6 @@
     "bootstrap-sass-official": "latest",
     "ng-token-auth": "latest",
     "angular-cookie": "latest",
-    "angular-ui-router": "latest",
-    "angular-rails-templates": "latest"
-  },
-  "resolutions": {
+    "angular-ui-router": "latest"
   }
 }
