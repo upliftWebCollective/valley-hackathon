@@ -1,6 +1,6 @@
 angular.module('rails-angular')
   .controller('HomeController', HomeController)
-  function HomeController(NgMap, $http) {
+  function HomeController(NgMap, $http, $stateParams, $state) {
     NgMap.getMap().then(function(map) {
       console.log(map.getCenter());
       console.log('markers', map.markers);
@@ -9,6 +9,7 @@ angular.module('rails-angular')
       $http.get('http://localhost:3000/point_of_interest')
         .then(function(res) {
           var pois = res.data
+          console.log('pois: ', pois)
           var markers = []
 
           pois.forEach(function(place) {
@@ -21,6 +22,16 @@ angular.module('rails-angular')
               // animation: google.maps.Animation.BOUNCE
             })
             markers.push(marker)
+            marker.addListener('click', function() {
+              var infowindow = new google.maps.InfoWindow({
+                content: '<div><strong>' + this.title + '</string><p>' + place.location + '</p>' +'<a href="#/info/'+ place.id+ '">Enter the code</a> </div>'
+              });
+              // '<a ui-sref="home.info({ id: '+ place.id+ '})">Boom</a> </div>'
+              infowindow.open(map, marker);
+              // $state.go('home.info/:id' , {param: place.id})
+            });
+
+
           })
         })
 

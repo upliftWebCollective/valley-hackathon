@@ -20,6 +20,11 @@ var app = angular.module('rails-angular',['ng-token-auth', 'ui.router', 'templat
         templateUrl: 'login.html',
         controller: 'LoginController as ctrl'
       })
+      .state('home.info', {
+        url: 'info/:id',
+        templateUrl: 'info.html',
+        controller: 'infoController as ctrl'
+      })
 
 
     $urlRouterProvider.otherwise('/')

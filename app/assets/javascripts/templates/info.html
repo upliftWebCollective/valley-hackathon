@@ -1,0 +1,20 @@
+<style>.info-container.ng-scope {
+    position: fixed;
+    bottom: 0;
+    z-index: 9999999999999;
+    background: #fff;
+}</style>
+<div class="info-container">
+  <h1>Business Name: {{ctrl.place.name}}</h1>
+  <p>Address: {{ctrl.place.location}}</p>
+  <h2>Enter code</h2>
+        <form name="form" ng-submit="ctrl.submitKey(item)">
+        <div class="input-group">
+          <input name="key" ng-disabled="ctrl.visited(item.name)" ng-model="ctrl.venue[item.name].key" type="text" class="form-control" placeholder="Example Business Key...">
+
+          <span class="input-group-btn">
+            <input class="btn btn-secondary" ng-disabled="ctrl.visited(item.name)" type="submit"></input>
+          </span>
+
+        </div>
+      </form>
