@@ -10,7 +10,6 @@
       <input type="password" name="password" ng-model="ctrl.loginForm.password" required="required" class="form-control"/>
     </div>
 
-    <button type="submit" class="nav-button" ng-click="ctrl.handleRegBtnClick()">Login</button>
+    <button type="submit" class="nav-button" ui-sref="home">Login</button>
   </form>
-  <h3> SHOW: {{this.loginForm}} AUTH {{this.auth}}</h3>
 </div>

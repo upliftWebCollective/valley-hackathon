@@ -1,8 +1,11 @@
+<style>#register{float: right;}.modTitle{display:inline-block;}</style>
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
-    <h1>ModestGO</h1>
+    <h1 class="modTitle">ModestGO</h1>
+    <button id="register" type="button" class="btn btn-info btn-lg"
+    data-target="#myModal" data-toggle="modal"
+    data ui-sref="home.login" >Login</button>
   </div>
-  <button id="openthefuckingmodal" type="button" class="btn btn-info btn-lg"  data-target="#myModal" data-toggle="modal" data ui-sref="home.register" >Open Large Modal</button>
 </nav>
   </div>
 <ng-map center="37.63909719999999,-120.99687819999997" zoom="14" style="height:100vh;"></ng-map>
