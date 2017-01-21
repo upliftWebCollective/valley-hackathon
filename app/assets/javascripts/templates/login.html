@@ -1,0 +1,16 @@
+<div class="vh-modal">
+  <form  role="form">
+    <div class="form-group">
+      <label>email</label>
+      <input type="email" name="email" ng-model="ctrl.loginForm.email" required="required" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+      <label>password</label>
+      <input type="password" name="password" ng-model="ctrl.loginForm.password" required="required" class="form-control"/>
+    </div>
+
+    <button type="submit" class="nav-button" ng-click="ctrl.handleRegBtnClick()">Login</button>
+  </form>
+  <h3> SHOW: {{this.loginForm}} AUTH {{this.auth}}</h3>
+</div>

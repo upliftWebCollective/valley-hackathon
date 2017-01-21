@@ -1,7 +1,7 @@
 var app = angular.module('rails-angular',['ng-token-auth', 'ui.router', 'templates', 'ngMap'])
   .config(function($authProvider, $stateProvider, $urlRouterProvider) {
     $authProvider.configure({
-      apiUrl: 'localhost:3000'
+      apiUrl: 'http://localhost:3000'
     })
 
     $stateProvider
@@ -10,6 +10,17 @@ var app = angular.module('rails-angular',['ng-token-auth', 'ui.router', 'templat
         templateUrl: 'home.html',
         controller: 'HomeController as ctrl'
       })
+      .state('home.register', {
+        url: 'register',
+        templateUrl: 'register.html',
+        controller: 'RegisterController as ctrl'
+      })
+      .state('home.login', {
+        url: 'login',
+        templateUrl: 'login.html',
+        controller: 'LoginController as ctrl'
+      })
+
 
     $urlRouterProvider.otherwise('/')
   })

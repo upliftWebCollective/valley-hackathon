@@ -1,0 +1,22 @@
+.nav-button {
+  background: transparent;
+  border: none;
+  decoration: none;
+  display: inline;
+  font-family: "Roboto", sans-serif;
+  outline: none;
+}
+
+.vh-modal {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  background: red;
+  width: 100vw;
+  z-index: 999999;
+}
+
+.form-group {
+  margin: 0 auto;
+  width: 80%;
+}
