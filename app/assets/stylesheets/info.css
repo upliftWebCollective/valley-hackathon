@@ -1,0 +1,7 @@
+.info-container {
+  padding-left: 5%;
+}
+
+.info-container > form {
+  padding-left: 0;
+}

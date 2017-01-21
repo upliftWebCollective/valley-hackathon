@@ -35,3 +35,7 @@ form {
   padding-top: 5vmin;
   width: 80%;
 }
+
+ #register[type="button"] {
+   line-height: 250%;
+ }
