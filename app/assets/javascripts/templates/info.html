@@ -8,8 +8,14 @@
   <h1>Business Name: {{ctrl.place.name}}</h1>
   <p>Address: {{ctrl.place.location}}</p>
   <h2>Enter code</h2>
+  <form action="/point_of_interest/validate_code" method="POST">
+    <input name="id" type="hidden" value="{{ctrl.place.id}}">
+    <input name="business_code" type="text" value="something someting {{ctrl.place.name}}">
+    <input type="submit" value="check">
+  </form>
         <form name="form" ng-submit="ctrl.submitKey(item)">
         <div class="input-group">
+
           <input name="key" ng-disabled="ctrl.visited(item.name)" ng-model="ctrl.venue[item.name].key" type="text" class="form-control" placeholder="Example Business Key...">
 
           <span class="input-group-btn">

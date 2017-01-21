@@ -1,5 +1,5 @@
 class PointOfInterestController < ApplicationController
-  before_action :authenticate_user!, only: [:create, :update]
+  # before_action :authenticate_user!, only: [:create, :update]
 
   def index
     point_of_interests = PointOfInterest.all
@@ -9,6 +9,15 @@ class PointOfInterestController < ApplicationController
   def show
     point_of_interest = PointOfInterest.find(params[:id])
     render json: point_of_interest.to_json
+  end
+
+  def validate_code
+    poi = PointOfInterest.find(params[:id])
+
+    res = poi.business_code == params[:business_code]
+    str = res ? "is" : "isn't"
+    
+    render json: {message: "Code #{str} valid.", match: res}.to_json
   end
 
   def create

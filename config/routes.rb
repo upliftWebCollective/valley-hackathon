@@ -5,4 +5,5 @@ Rails.application.routes.draw do
 
   resources :point_of_interest, only: [:index, :show, :create, :update]
   resources :business, only: [:index, :show, :create, :update]
+  post '/point_of_interest/validate_code', to: 'point_of_interest#validate_code'
 end
