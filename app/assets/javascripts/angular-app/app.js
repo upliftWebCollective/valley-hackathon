@@ -26,7 +26,7 @@ var app = angular.module('rails-angular',['ng-token-auth', 'ui.router', 'templat
         controller: 'infoController as ctrl'
       })
 
-      .state('leaderboard', {
+      .state('home.leaderboard', {
         url: 'leaderboard',
         templateUrl: 'leaderboard.html',
         controller: 'LeaderboardController as ctrl'
