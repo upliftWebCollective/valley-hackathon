@@ -3,13 +3,24 @@
   float: right;
 }
 .modTitle {
-  display:inline;
+    display: inline-block;
+    margin-top: 10px !important;
+}
+span.points.ng-binding {
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    border: 2px solid #e74c3c;
+    border-radius: 20px;
+    padding: 4px 10px;
+    color: #e74c3c;
+    background: #eaeaff;
 }
 </style>
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <h1 class="modTitle">ModestGO</h1>
-    <span>{{ctrl.points}}</span>
+    <span class="points">{{ctrl.points}}</span>
     <button id="register" type="button" class="btn btn-info btn-lg"
     data-target="#myModal" data-toggle="modal"
     data ui-sref="home.login" >Login</button>
