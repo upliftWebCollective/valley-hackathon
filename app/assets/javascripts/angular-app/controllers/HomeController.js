@@ -2,7 +2,7 @@ angular.module('rails-angular')
   .controller('HomeController', ["NgMap", "$http", "$stateParams", "$state", HomeController ])
   function HomeController(NgMap, $http, $stateParams, $state) {
     this.points = 0
-    
+
     NgMap.getMap().then(function(map) {
       $http.get('/point_of_interest')
         .then(function(res) {
@@ -17,16 +17,15 @@ angular.module('rails-angular')
               map: map,
               position: pos,
               title: place.name
-              // animation: google.maps.Animation.BOUNCE
             })
             markers.push(marker)
             marker.addListener('click', function() {
+              map.setCenter(marker.getPosition());
+              $state.go('home.info', {id: place.id})
               var infowindow = new google.maps.InfoWindow({
-                content: '<div><strong>' + this.title + '</string><p>' + place.location + '</p>' +'<a href="#/info/'+ place.id+ '">Enter the code</a> </div>'
+                content: '<div><strong>' + this.title + '</string><p>' + place.location + '</p></div>'
               });
-              // '<a ui-sref="home.info({ id: '+ place.id+ '})">Boom</a> </div>'
               infowindow.open(map, marker);
-              // $state.go('home.info/:id' , {param: place.id})
             });
 
 
