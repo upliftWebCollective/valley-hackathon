@@ -1,12 +1,6 @@
-<style>.info-container.ng-scope {
-    position: fixed;
-    bottom: 0;
-    z-index: 9999999999999;
-    background: #fff;
-}</style>
 <div class="info-container">
-  <h1>Business Name: {{ctrl.place.name}}</h1>
-  <p>Address: {{ctrl.place.location}}</p>
+  <h1>{{ :: ctrl.place.name}}</h1>
+  <p>Address: {{ :: ctrl.place.location}}</p>
   <h2>Enter code</h2>
   <form name="form" ng-submit="ctrl.submitKey()">
     <div class="input-group">
