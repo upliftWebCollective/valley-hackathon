@@ -16,6 +16,7 @@ angular.module('rails-angular')
             //display to the user that they got the correct code
           } else {
             //display that they got the code incorrect
+            console.log("CODE WASN'T CORRECT")
           }
         })
     }
